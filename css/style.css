@@ -1,0 +1,372 @@
+body {
+  color: #6f6f6f;
+  font-size: 18px;
+  line-height: 1.3;
+  font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu-expanded {
+  overflow: hidden;
+}
+
+/* parallax
+   ========================================================================== */
+
+.code-bg {
+  min-height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/code.jpg);
+}
+
+/* main
+   ========================================================================== */
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* header
+   ========================================================================== */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+  color: #fff;
+  background-color: #000;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 340px) {
+  .header {
+    padding-left: 30px;
+  }
+}
+
+.logo {
+  font-size: 22px;
+  line-height: 38px;
+  font-family: 'Lato', sans-serif;
+}
+
+.logo__byline {
+  font-size: 16px;
+  color: #4acaa8;
+}
+
+.menu-show-button {
+  position: fixed;
+  top: 0;
+  right: 260px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: #4acaa8;
+  cursor: pointer;
+  -webkit-transition: right 1s ease;
+  transition: right 1s ease;
+}
+
+.menu-collapsed .menu-show-button {
+  right: 0;
+}
+
+.menu-show-button:before {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 7px;
+  left: 50%;
+  top: 50%;
+  margin: -7px 0 0 -8px;
+  border-top: 3px solid #fcfcfc;
+  border-bottom: 3px solid #fcfcfc;
+  overflow: hidden;
+}
+
+.menu-expanded .menu-show-button:before {
+  margin: -3px 0 0 -5px;
+  border-bottom-width: 0;
+  transform: rotate(-45deg);
+}
+
+.menu-show-button:after {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 2px;
+  left: 50%;
+  top: 50%;
+  margin: -2px 0 0 -8px;
+  border-top: 3px solid #fcfcfc;
+  overflow: hidden;
+}
+
+.menu-expanded .menu-show-button:after {
+  transform: rotate(45deg);
+}
+
+.menu-show-button:focus {
+  outline: 0;
+}
+
+/* section
+   ========================================================================== */
+
+.section {
+  padding: 25px 0;
+  border-top: 6px solid #f4f4f4;
+}
+
+.section__title,
+.section__highlight-link {
+  color: #4acaa8;
+}
+
+.section__title,
+.section__highlight {
+  font-family: 'Lato', sans-serif;
+}
+
+.section__title,
+.section__subtitle,
+.section__highlight {
+  text-transform: uppercase;
+}
+
+.section__title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.section__subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.section__highlight {
+  margin: 5px 0 20px;
+  font-size: 22px;
+}
+
+.section__highlight--another-item {
+  margin-top: 35px;
+  padding-top: 35px;
+  border-top: 2px solid #f4f4f4;
+}
+
+.section__highlight-details {
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.section__description {
+  margin-bottom: 20px;
+}
+
+.section__list {
+  margin-bottom: 20px;
+}
+
+.section__list a {
+  color: #6f6f6f;
+}
+
+.section__list a:hover,
+.section__list a:focus {
+  color: #4acaa8;
+}
+
+/* footer
+   ========================================================================== */
+
+.footer {
+  padding: 25px;
+  color: #6f6f6f;
+  text-align: center;
+}
+
+.photo-copyright {
+  margin-top: 15px;
+  text-align: right;
+  font-size: 10px;
+}
+
+.photo-copyright a {
+  color: #6f6f6f;
+}
+
+/* aside
+   ========================================================================== */
+
+.aside {
+  overflow-y: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  width: 260px;
+  height: 100%;
+  padding-top: 30px;
+  color: #fff;
+  background-color: #4acaa8;
+  -webkit-transition: width 1s ease;
+  transition: width 1s ease;
+  box-sizing: border-box;
+}
+
+.menu-collapsed .aside {
+  width: 0;
+  color: #4acaa8;
+}
+
+.about-me__avatar-container {
+  width: 55%;
+  margin: 30px auto;
+}
+
+.about-me__avatar {
+  padding-top: 130%;
+  border: 4px solid #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/avatar.jpg);
+}
+
+.about-me__name {
+  margin-bottom: 15px;
+  font-size: 40px;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+
+.about-me__byline {
+  margin-bottom: 35px;
+  font-size: 18px;
+  font-style: italic;
+  text-align: center;
+}
+
+.about-me__more {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.about-me__location {
+  display: block;
+}
+
+.aside-nav {
+  margin-bottom: 30px;
+  list-style-type: none;
+  text-align: center;
+}
+
+.aside-nav li {
+  display: block;
+  border-bottom: solid 2px #5ccfb0;
+}
+
+.aside-nav a {
+  display: block;
+  padding: 10px 0;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.aside-nav a:hover,
+.aside-nav a:focus {
+  color: #4acaa8;
+  background-color: #fff;
+}
+
+.aside-contacts {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.aside-contacts li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.aside-contacts a {
+  border-bottom: 2px solid transparent;
+}
+
+.aside-nav a,
+.aside-contacts a {
+  color: #fff;
+  -webkit-transition: color .5s ease, background-color .5s ease;
+  transition: color .5s ease, background-color .5s ease;
+}
+
+.aside-contacts a:hover,
+.aside-contacts a:focus {
+  border-bottom-color: #fff;
+}
+
+.menu-collapsed .aside-nav a,
+.menu-collapsed .aside-contacts a {
+  color: #4acaa8;
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-expanded {
+    overflow: visible;
+  }
+
+  .main {
+    width: calc( 100% - 300px);
+  }
+
+  .aside {
+    overflow-x: hidden;
+    width: 20%;
+    min-width: 300px;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .aside-nav a {
+    padding: 20px 0;
+  }
+
+  .section {
+    padding: 100px 0;
+  }
+
+  .code-bg {
+    min-height: 300px;
+    background-attachment: fixed;
+  }
+}
+
+@media screen and (min-width: 1510px) {
+  .main {
+    width: 80%;
+  }
+}
