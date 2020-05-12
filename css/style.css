@@ -134,12 +134,14 @@ a {
 }
 
 .section__title,
-.section__highlight-link {
+.section__highlight-link, 
+.section__highlight-company {
   color: #4acaa8;
 }
 
 .section__title,
-.section__highlight {
+.section__highlight, 
+.section__highlight-company {
   font-family: 'Lato', sans-serif;
 }
 
